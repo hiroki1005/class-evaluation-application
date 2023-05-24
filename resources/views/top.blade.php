@@ -47,7 +47,7 @@
       </div>
       
       <div class="image">
-         
+        <img src="image/nishimon.jpg" >
       </div>
      
     
