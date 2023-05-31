@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Blog</title>
+        <title>Kindai Evaluation</title>
         <!-- Fonts -->
         <link rel="stylesheet" href="/css/style.css">
     </head>
@@ -30,8 +30,8 @@
               <th>投稿日</th>
           </tr>
           <tr>
-              <td>{{posts->name}}</td>
-              <td>{{posts->name}}</td>
+              <td></td>
+              <td></td>
               <td></td>
           </tr>
           @endforeach
