@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Kindai Evaluation</title>
+        <title>成果物</title>
         <!-- Fonts -->
         <link rel="stylesheet" href="/css/style.css">
     </head>
@@ -14,7 +14,7 @@
         
       <div class="link" >
         <p>
-           <a href="">投稿フォーム</a>
+           <a href="/posts/create">投稿フォーム</a>
             | 
            <a href="/">back</a>
         </p>
@@ -22,20 +22,16 @@
       
       <h2>授業一覧</h2>
       
-      <table border="1">
-          @foreach ($posts as $post)
-          <tr>
-              <th>授業名</th>
-              <th>教員名</th>
-              <th>投稿日</th>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          @endforeach
-      </table>
+      <div class='posts'>
+            @foreach ($posts as $post)
+                <div class='post'>
+                    <h2 class='title'>
+                        <a href="/posts/{{$post->id}}">{{ $post->title }}</a>
+                    </h2>
+                    <p class='body'>{{ $post->professor }}</p>
+                </div>
+            @endforeach
+        </div>
     
     </body>
 </html>

@@ -16,9 +16,11 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->string('title',50);
-            $table->string('body',200);
+            $table->string('professor',50);
+            $table->string('overview',200);
             $table->integer('ease');
             $table->integer('satisfaction');
+            $table->string('evaluation');
             $table->timestamps();
         });
     }
